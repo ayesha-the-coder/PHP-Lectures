@@ -1,4 +1,5 @@
 <?php
+//database connection
 $conn = mysqli_connect("localhost", "root", "", "db_crud");
 
 if (isset($_POST['login'])) {
