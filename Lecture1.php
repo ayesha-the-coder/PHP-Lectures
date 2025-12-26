@@ -9,5 +9,6 @@ $name = "Ali";
 $age = 21;
 $email = "ali@gmail.com";
 
-echo "My name is " . $name . "<br>Your Age is " .$age. "<br> Your Email is " .$email;
+echo "My name is " . $name . "<br>Your Age is " .$age. "<br> Your Email is " .$email. "<br>";
+echo "${name} is a Good Boy Age is ${age} Email is ${email} ";
 ?>
