@@ -2,7 +2,6 @@
 echo "<h1>Arithemetic Operators </h1>";
 $a = 50;
 $b = 10;
-
 echo"Addition  is " . $a+$b . "<br>";
 echo"Subtraction is " . $a-$b . "<br>";
 echo"Multiple is " . $a*$b . "<br>";
@@ -38,9 +37,7 @@ $y  = 10;
 echo "Not Equal != ";
 echo var_dump($x != $y). "<br>";
 
-
 echo "<h1>Logical Operators && AND</h1>";
-
 $username = "Aliyan";
 $pass = 123;
 
@@ -70,5 +67,28 @@ else{
     echo "Invaild Username";
 }
 
+
+echo "<h1> Switch Case </h1>";
+
+$mycolor = "black";
+
+
+switch($mycolor){
+    case "red":
+    echo "This is a ${mycolor} Color";
+    break;
+
+    case "blue":
+    echo "This is a ${mycolor} Color";
+    break;
+
+    case "pink":
+    echo "This is a ${mycolor} Color";
+    break;
+
+    case "black":
+    echo "This is a ${mycolor} Color";
+    break;
+}
 
 ?>
