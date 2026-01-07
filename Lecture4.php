@@ -5,11 +5,11 @@
 //          echo "Inner Loop " . $j ."<br>";
 //     }
 // }
-for ($a=5; $a >=1 ; $a--) {
+for ($a=1; $a <=5 ; $a++) {
     // echo $a;
 
     for ($f=1; $f <=$a ; $f++) { 
-        echo $f;
+        echo $a;
     }
     echo "<br>";
 }
