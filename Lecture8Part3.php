@@ -5,23 +5,31 @@
 // echo "<b>Your IP Address</b> : ".$_SERVER['REMOTE_ADDR']. "<br>";
 // echo "<b>Brower Info</b> : ".$_SERVER['HTTP_USER_AGENT']. "<br>";
 // echo "<b>Full Path</b> : ".$_SERVER['SCRIPT_FILENAME']. "<br>";
-if(isset($_FILES['myfile'])){
-    // echo "<pre>";
-    // var_dump($_FILES);
-    // echo "</pre>";
 
-   $file_name =  $_FILES['myfile']['name'];
-   $file_size = $_FILES['myfile']['size'];
-   $file_tmp = $_FILES['myfile']['tmp_name'];
-   $file_type = $_FILES['myfile']['type'];
-
-   if(move_uploaded_file($file_tmp,"upload/".$file_name)){
-    echo "<script>alert('File Upload Successfully..')</script>";
-   }
-   else{
-    echo "<script>alert('Could Not Upload File..')</script>";
-   }
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    echo "This is a Get Method";
 }
+else{
+    echo "This is a Post Method";
+}
+
+// if(isset($_FILES['myfile'])){
+//     // echo "<pre>";
+//     // var_dump($_FILES);
+//     // echo "</pre>";
+
+//    $file_name =  $_FILES['myfile']['name'];
+//    $file_size = $_FILES['myfile']['size'];
+//    $file_tmp = $_FILES['myfile']['tmp_name'];
+//    $file_type = $_FILES['myfile']['type'];
+
+//    if(move_uploaded_file($file_tmp,"upload/".$file_name)){
+//     echo "<script>alert('File Upload Successfully..')</script>";
+//    }
+//    else{
+//     echo "<script>alert('Could Not Upload File..')</script>";
+//    }
+// }
 
 
 ?>
