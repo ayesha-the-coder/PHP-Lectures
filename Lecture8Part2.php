@@ -59,6 +59,76 @@ if(isset($_POST['btn'])){
             </div>
         </div>
     </div>
+    <!-- ---------------Lecture8 Part2 Task Code -->
+     <!-- Q1: Create a PHP form with 6 fields: Name, Email, Contact Number, City, Gender, and Age.
+On form submission, display the submitted data in a Bootstrap-styled table on the same page using the POST method. -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Student Info Form</h2>
+
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form action="" method="post">
+                <input type="text" name="name" placeholder="Enter your name" class="form-control mb-3" required>
+                <input type="email" name="email" placeholder="Enter your email" class="form-control mb-3" required>
+                <input type="text" name="contact" placeholder="Enter contact number" class="form-control mb-3" required>
+                <input type="text" name="city" placeholder="Enter your city" class="form-control mb-3" required>
+                
+                <select name="gender" class="form-control mb-3" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <input type="number" name="age" placeholder="Enter your age" class="form-control mb-3" required>
+
+                <button class="btn btn-dark w-100" name="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <?php
+    if (isset($_POST['submit'])) {
+        $name = ($_POST['name']);
+        $email = ($_POST['email']);
+        $contact = ($_POST['contact']);
+        $city = ($_POST['city']);
+        $gender = ($_POST['gender']);
+        $age = ($_POST['age']);
+        
+        echo "<div class='row mt-5'>
+        <div class='col-md-10 mx-auto'>
+        <h3 class='text-center mb-3'>Submitted Student Information</h3>
+        <table class='table table-bordered text-center'>
+        <thead class='table-dark'>
+        <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>City</th>
+        <th>Gender</th>
+        <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>$name</td>
+        <td>$email</td>
+        <td>$contact</td>
+        <td>$city</td>
+        <td>$gender</td>
+        <td>$age</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        </div>";
+    }
+    ?>
+</div> -->
+
     
 </body>
 </html>
