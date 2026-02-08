@@ -14,10 +14,6 @@ if(isset($_POST['btn'])){
         echo "<script>alert('Data Inserted Successfully..')</script>";
     }
 }
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,8 +45,6 @@ if(isset($_POST['btn'])){
                             <input type="text" id="form-label" placeholder="Enter Your City" class="form-control mb-4" name="city">
 
                             <button type="submit" class="btn btn-primary w-100" name="btn">Submit</button>
-
-                            
                         </form>
                     </div>
                 </div>
