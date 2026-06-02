@@ -1,43 +1,50 @@
 <?php
 echo "<h1>For Loop Example</h1>";
-for ($i=0; $i < 5 ; $i++) { 
-    echo "This is a Number : ${i} <br>";
+
+for($i = 0; $i<=5; $i++){
+    echo "This is a Number {$i} <br>";
 }
 
 echo "<h1>While Loop Example</h1>";
 
-$a = 1;
-while($a<= 10){
-    echo $a . "<br>";
+$a = 3;
+while($a <=16){
+    echo "{$a} <br>";
     $a++;
 }
-
 echo "<h1>Do While Loop Example</h1>";
 
-$x = 1;
+$x = 15;
 do{
-    echo $x . "DO while Loop <br>";
+    echo "Do while Loop {$x} <br> ";
     $x++;
+}while($x <= 11);
 
-}while($x <=5);
+echo "<h1>foreach Loop Example</h1>";
 
-echo "<h1>For Each Loop Example</h1>";
-
-$color = ["red" , "blue", "black", "green"];
+$color = ["red" , "green", "orange", "yellow", "pink"];
 
 foreach($color as $value){
-    // echo $value. "<br>";
-    echo $color[1]. "<br>";
+    // echo "{$value} <br>";
+    echo "{$color[2]} <br>";
 }
 
-$students = [
-    "name" => "Ali",
-    "age" => 22,
-    "marks" => "A Grade"
+echo "<h1>foreach Loop Example 2</h1>";
+
+$student = [
+    "name" => "Aliyan",
+    "age" => 21,
+    "city" => "Karachi",
+    "course" => "web development"
+
 ];
-foreach($students as $key => $value){
-    // echo $key. ":" .$value. "<br>";
-    echo "Students Name : " . $students["name"]. "<br>";
+foreach($student as $key => $val){
+
+// echo "$key : $val <br>";
+// echo "student name is : {$student['name']} <br>";
+  if($key == "name"){
+        echo "Student Name is: $val";
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
