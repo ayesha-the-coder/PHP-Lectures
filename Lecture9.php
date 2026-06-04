@@ -1,31 +1,35 @@
 <?php
- session_start();
+// Session Example # 01 
+session_start();
 
-// Simple Session Example
-//  $_SESSION['username'] = "Ali";
-//  echo $_SESSION['username'];
+// $_SESSION['username'] = "Ali khan";
+// echo $_SESSION['username'];
+
+// Session Example # 02
 
 if(isset($_SESSION['user'])){
-     header("Location:dashboard9.php");
-        exit;
+    header('Location: welcome.php');
 }
 
-$correct_username = "students";
-$correct_password = 12345;
+$correct_name = 'student';
+$correct_pass = '1234';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $username = $_POST['username'];
-    $userpassword = $_POST['pass'];
+    $pass = $_POST['password'];
 
-    if($username == $correct_username && $userpassword == $correct_password){
+    if($username == $correct_name  &&  $pass == $correct_pass){
         $_SESSION['user'] = $username;
-        header("Location:dashboard9.php");
+        header('Location: welcome.php');
         exit;
     }
     else{
-        $error =  "Invalid Username and Password";
+       $error = "Invaild username or password";
     }
+
 }
+
+
 
 ?>
 
@@ -34,34 +38,144 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Login </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"> 
 </head>
 <body>
-    <?php
-    if(isset($error))
-        echo "<p style='color:red;'>$error</p>";
-    
-    
-    ?>
-    <div class="container">
-        <h2 class="text-center mt-4">Login Page</h2>
-        <div class="row">
-            <div class="col-4 mx-auto shadow-none p-5 mb-5 mt-3 bg-body-tertiary rounded">
-                <form action="#" method="post">
-                    <label for="">UserName</label>
-                    <input type="text" placeholder="Enter Your Name" name="username" class="form-control mb-4">
-
-                     <label for="">Password</label>
-                    <input type="password" placeholder="Enter Your Password" name="pass" class="form-control">
-
-                    <button type="submit" class="btn btn-danger w-100 mt-4">Login</button>
-
+    <?php if(isset($error)) echo "<p style='color: red;'>$error</p>" ?>
+   <div class="container">
+    <h1 class="text-center">Login Form</h1>
+    <div class="row">
+            <div class="col-4 mx-auto">
+                <form action="" method="post">
+                    Username: <input type="text" name="username" class="form-control" placeholder="Enter Your Name">
+                    Passsword: <input type="password" name="password" class="form-control" placeholder="Enter Your Password">
+                    <button type="submit" class="btn btn-dark w-100 mt-3"  >Submit</button>
                 </form>
             </div>
-        </div>
     </div>
+   </div>
     
 </body>
 </html>
+
+<!-- Create a login form using POST that checks if the username is "admin" and the password is "1234". If correct, display an alert saying "Login Successfully" and show the username. Otherwise, show an alert saying "Invalid username or password". -->
+<form method="POST" action="">
+  Username: <input type="text" name="username"><br>
+  Password: <input type="password" name="password"><br>
+  <input type="submit" value="Login">
+</form>
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
+
+    if ($user === 'admin' && $pass === '1234') {
+       echo "<script> alert('Login Successfully..') </script>";
+       echo $_POST['username']; 
+    } else {
+       echo "<script>alert('Invalid username or password')</script>";
+    }
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     echo "Name: " . ($_POST['name']) . "<br>";
+//     echo "Email: " . ($_POST['email']) . "<br>";
+//     echo "Message: " . (($_POST['message'])) . "<br>";
+// }
+
+
+
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $file = $_FILES['pdf'];
+//     $fileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+
+//     if ($fileType !== 'pdf') {
+//         echo "Only PDF files are allowed.";
+//     } elseif ($file['size'] > 2 * 1024 * 1024) {
+//         echo "File size should be less than 2MB.";
+//     } else {
+//         move_uploaded_file($file["tmp_name"], "uploads/" . $file["name"]);
+//         echo "PDF uploaded successfully!";
+//     }
+// }
+
+
+?>
+
+
+<!-- <form action="" method="POST">
+  Name: <input type="text" name="name"><br>
+  Email: <input type="email" name="email"><br>
+  Message:<br>
+  <textarea name="message"></textarea><br>
+  <input type="submit" value="Send">
+</form> -->
+
+<!-- <form method="POST" enctype="multipart/form-data" action="uploads.php">
+  Upload PDF: <input type="file" name="pdf"><br>
+  <input type="submit" value="Upload">
+</form> -->
+
+
+<?php
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     echo "Form submitted at: " . date("Y-m-d H:i:s", $_SERVER['REQUEST_TIME']);
+// }
+?>
+<!-- 
+<form method="POST">
+  <input type="submit" value="Submit">
+</form> -->
+
+
+
