@@ -38,11 +38,11 @@ $student = [
     "course" => "web development"
 
 ];
-foreach($student as $key => $val){
+foreach($student as $keys => $val){
 
-// echo "$key : $val <br>";
+// echo "$keys : $val <br>";
 // echo "student name is : {$student['name']} <br>";
-  if($key == "name"){
+  if($keys == "name"){
         echo "Student Name is: $val";
     }
 }
