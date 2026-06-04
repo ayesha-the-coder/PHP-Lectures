@@ -4,7 +4,7 @@ echo "Hello World <br>";
 echo "php stand for " . "Hypertext Preprocessor";
 echo " and also ", "scripting language <br>";
 
-//Varibles Example
+//Varibles Example # 2
 $name = "Ali";
 $age = 21;
 $email = "ali@gmail.com";
